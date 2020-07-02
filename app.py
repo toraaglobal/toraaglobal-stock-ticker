@@ -7,12 +7,13 @@ import dash
 from dash.dependencies import Input, Output, State
 import pandas_datareader as web
 from datetime import datetime
-import dash_auth 
+#import dash_auth 
+#import configparser
 
-USERNAME_PASSWORD_PAIRS = [['admin','aotasa99'], ['toraaglobal','Test2019']]
+#USERNAME_PASSWORD_PAIRS = [['admin','123456'], ['admin2','123456']]
 
 app = dash.Dash()
-auth = dash_auth.BasicAuth(app, USERNAME_PASSWORD_PAIRS)
+#auth = dash_auth.BasicAuth(app, USERNAME_PASSWORD_PAIRS)
 server = app.server
 # Read nasdaq stock list from csv
 nsdq = pd.read_csv('./NASDAQcompanylist.csv')
